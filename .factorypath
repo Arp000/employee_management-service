@@ -140,4 +140,5 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/glassfish/hk2/spring-bridge/3.0.3/spring-bridge-3.0.3.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/glassfish/hk2/hk2-api/3.0.3/hk2-api-3.0.3.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.14.2/jackson-dataformat-xml-2.14.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/boot/spring-boot-configuration-processor/3.0.5/spring-boot-configuration-processor-3.0.5.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

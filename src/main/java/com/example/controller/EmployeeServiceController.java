@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.config.EmployeeConfiguration;
 import com.example.pojo.Employee;
 import com.example.service.EmployeeService;
 
@@ -21,6 +22,9 @@ public class EmployeeServiceController {
 	
 	@Autowired
 	EmployeeService employeeService;
+	
+	@Autowired
+	EmployeeConfiguration config;
 	
 	@PostMapping
 	public ResponseEntity<String> registerEmployee(@RequestBody Employee employee){
@@ -43,6 +47,10 @@ public class EmployeeServiceController {
 	public ResponseEntity<String> updateEmployee(@RequestBody Employee employee){
 		employeeService.updateEmployee(employee);
 		return new ResponseEntity<>("Employee record updated successfully", HttpStatus.OK);
-
+	}
+	
+	@GetMapping(value = "/environment")
+	public ResponseEntity<String> getEnvironmentName(){
+		return new ResponseEntity<>(config.getValue(), HttpStatus.OK);
 	}
 }
